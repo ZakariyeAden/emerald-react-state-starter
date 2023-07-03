@@ -1,13 +1,23 @@
-import './App.css';
+// Object destructuring. our import is equilvalent to these two lines
+import { useState } from "react";
+import "./App.css";
 
 function App() {
-    return (
-        <div className="App">
-            <p>Hello! My name is Luke.</p>
-            <button>Click me!</button>
-            <p>I've clicked the button 0 times.</p>
-        </div>
-    );
+  // State is variable data that can be displayed in DOM!
+  // using hooks from React. Using component lifestyle feature
+
+  // useState is function and we'll pass in whatever we want the intial
+  // [ CurrentStateValue, functiontoUpdateTheStateValue]
+  const [name, setName] = useState("Zakariye");
+  const [count, setCount] = useState(0);
+
+  return (
+    <div className="App">
+      <p>Hello! My name is {name}.</p>
+      <button onClick={() => setCount(count + 1)}>Click me!</button>
+      <p>I've clicked the button {count} times.</p>
+    </div>
+  );
 }
 
 export default App;
