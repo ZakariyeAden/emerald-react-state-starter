@@ -7,7 +7,7 @@ function App() {
   // using hooks from React. Using component lifestyle feature
 
   // useState is function and we'll pass in whatever we want the intial
-  // [ CurrentStateValue, functiontoUpdateTheStateValue]
+  // Example: [ CurrentStateValue, functiontoUpdateTheStateValue]
   const [name, setName] = useState("Zakariye");
   const [count, setCount] = useState(0);
 
