@@ -1,13 +1,15 @@
-import React from "react";
-import Clicker from "../Clicker/clicker";
-import "./App.css";
+import { useState } from "react";
+import Clicker from "../Clicker/Clicker";
+
 
 function App() {
-
+  const [color, setColor] = useState('red');
   return (
-    <div className="App">
+    <>
+        <Clicker color={color} setColor={setColor}/>
         <Clicker/>
-    </div>
+        <Clicker/>
+    </>
   );
 }
 

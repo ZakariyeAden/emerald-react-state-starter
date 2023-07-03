@@ -1,8 +1,8 @@
 // Object destructuring. our import is equilvalent to these two lines
 import { useState } from "react";
+import "../Clicker/App.css";
 
-
-function Clicker() {
+function Clicker(props) {
   // State is variable data that can be displayed in DOM!
   // using hooks from React. Using component lifestyle feature
 
@@ -16,11 +16,13 @@ function Clicker() {
     // React needs to know when state changes so it can update the DOM  
     setCount(count + 1);
     console.log("Clicked");
+
     // Do some other stuff...
   };
   return (
-    <div>
+    <div className="App">
       <p>Hello! My name is {name}.</p>
+      <p>My favorite color is: {props.color}</p>
       <button onClick={handleClick}>Click me!</button>
       <p>I've clicked the button {count} times.</p>
     </div>
